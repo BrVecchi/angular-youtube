@@ -9,6 +9,7 @@ import { Component05Component } from './component05/component05.component';
 import { Component06Component } from './component06/component06.component';
 import { Component07Component } from './component07/component07.component';
 import { Component08Component } from './component08/component08.component';
+import { Component11Component } from './component11/component11.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { Component08Component } from './component08/component08.component';
     Component06Component,
     Component07Component,
     Component08Component,
+    Component11Component,
   ],
 })
 export class AppComponent {
