@@ -51,7 +51,7 @@
     form.get('city').hasError('minlength')
   ">
   }@else {
-  <input type="button" value="Alterar" class="btn btn-primary" [disabled]="
+  <input type="button" value="Alterar" (click)="change()" class="btn btn-primary" [disabled]="
       form.get('name').hasError('required')
       ||
       form.get('name').hasError('minlength')
@@ -66,8 +66,8 @@
       ||
       form.get('city').hasError('minlength')
     ">
-  <input type="button" value="Remover" class="btn btn-primary">
-  <input type="button" value="Cancelar" class="btn btn-primary">
+  <input type="button" value="Remover" (click)="remove()" class="btn btn-primary">
+  <input type="button" value="Cancelar" (click)="cancel()" class="btn btn-primary">
   }
 </form>
 

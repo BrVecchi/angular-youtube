@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 import { Person } from '../../model/Person';
 
@@ -59,5 +64,35 @@ export class Component11Component {
 
     // Visibilidade dos botões
     this.btnRegister = false;
+  }
+
+  // Função alteração
+  change() {
+    // Alterar vetor
+    this.vector[this.index] = this.form.value as Person;
+
+    // Limpar os inputs
+    this.form.reset();
+
+    // Visibilidadde dos botões
+    this.btnRegister = true;
+  }
+
+  // Função remover
+  remove() {
+    // Removendo pessoa do vetr
+    this.vector.splice(this.index, 1);
+
+    // Limpeza dos inputs
+    this.form.reset();
+
+    // Vizibilidade dos botões
+    this.btnRegister = true;
+  }
+
+  // Função cancelar
+  cancel() {
+    this.form.reset();
+    this.btnRegister = true;
   }
 }
