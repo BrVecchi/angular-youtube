@@ -1,13 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { Person } from '../../model/Person';
+import { Person } from '../model/Person';
 
 @Component({
   selector: 'app-component11',
