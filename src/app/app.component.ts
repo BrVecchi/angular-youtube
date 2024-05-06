@@ -10,24 +10,28 @@ import { Component06Component } from './component06/component06.component';
 import { Component07Component } from './component07/component07.component';
 import { Component08Component } from './component08/component08.component';
 import { Component11Component } from './component11/component11.component';
+import { Component12Component } from './component12/component12.component';
+import { Component13Component } from './component13/component13.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  imports: [
-    RouterOutlet,
-    Component01Component,
-    Component02Component,
-    Component03Component,
-    Component04Component,
-    Component05Component,
-    Component06Component,
-    Component07Component,
-    Component08Component,
-    Component11Component,
-  ],
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [
+        RouterOutlet,
+        Component01Component,
+        Component02Component,
+        Component03Component,
+        Component04Component,
+        Component05Component,
+        Component06Component,
+        Component07Component,
+        Component08Component,
+        Component11Component,
+        Component12Component,
+        Component13Component
+    ]
 })
 export class AppComponent {
   title = 'angular-base';
