@@ -1,12 +1,14 @@
-<!-- FORMULÁRIO -->
-<form>
-    <input type="number" class="form-control" readonly>
-    <input type="text" class="form-control" placeholder="Nome">
-    <input type="number" class="form-control" placeholder="Valor">
+{{form.value | json}}
 
-    <input type="button" class="btn btn-primary" value="Cadastrar">
-    <input type="button" class="btn btn-primary" value="Alterar">
-    <input type="button" class="btn btn-primary" value="Remover">
+<!-- FORMULÁRIO -->
+<form [formGroup]="form">
+    <input type="number" class="form-control" formControlName="id" readonly>
+    <input type="text" class="form-control" formControlName="nome" placeholder="Nome">
+    <input type="number" class="form-control" formControlName="valor" placeholder="Valor">
+
+    <input type="button" class="btn btn-primary" value="Cadastrar" *ngIf="btnRegister" (click)="register()">
+    <input type="button" class="btn btn-primary" value="Alterar" *ngIf="!btnRegister" (click)="change()">
+    <input type="button" class="btn btn-primary" value="Remover" *ngIf="!btnRegister" (click)="remove()">
 </form>
 
 <!-- TABELA -->
@@ -21,11 +23,11 @@
     </thead>
 
     <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let v of vector; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{v.nome}}</td>
+            <td>{{v.valor}}</td>
+            <td><button class="btn btn-primary" (click)="selectProduct(i)">Selecionar</button></td>
         </tr>
     </tbody>
 </table>
