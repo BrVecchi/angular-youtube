@@ -35,7 +35,7 @@
   <input type="text" formControlName="city" placeholder="Cidade" class="form-control">
 
   @if (btnRegister) {
-  <input type="button" value="Cadastrat" class="btn btn-primary" [disabled]="
+  <input type="button" value="Cadastrar" (click)="register()" class="btn btn-primary" [disabled]="
     form.get('name').hasError('required')
     ||
     form.get('name').hasError('minlength')
@@ -51,22 +51,6 @@
     form.get('city').hasError('minlength')
   ">
   }@else {
-
-  <input type="button" value="Cadastrat" (click)="register()" class="btn btn-primary" [disabled]="
-      form.get('name').hasError('required')
-      ||
-      form.get('name').hasError('minlength')
-      ||
-      form.get('age').hasError('required')
-      ||
-      form.get('age').hasError('min')
-      ||
-      form.get('age').hasError('max')
-      ||
-      form.get('city').hasError('required')
-      ||
-      form.get('city').hasError('minlength')
-    ">
   <input type="button" value="Alterar" class="btn btn-primary" [disabled]="
       form.get('name').hasError('required')
       ||
@@ -98,5 +82,13 @@
     </tr>
   </thead>
 
-  <tbody></tbody>
+  <tbody>
+    <tr *ngFor="let v of vector; index as index">
+      <td>{{index + 1}}</td>
+      <td>{{v.name}}</td>
+      <td>{{v.age}}</td>
+      <td>{{v.city}}</td>
+      <td><button class="btn btn-primary" (click)="select(index)">Selecionar</button></td>
+    </tr>
+  </tbody>
 </table>
