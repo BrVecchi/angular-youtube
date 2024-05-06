@@ -1,0 +1,8 @@
+<h1>{{formulario.value.nome}}</h1>
+<h1>{{formulario.value.cidade}}</h1>
+
+<form (submit)="limpar()" [formGroup]="formulario">
+  <input type="text" formControlName="nome" placeholder="Nome">
+  <input type="text" formControlName="cidade" placeholder="Cidade">
+  <button type="submit">Enviar</button>
+</form>

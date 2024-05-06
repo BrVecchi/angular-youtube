@@ -1,0 +1,7 @@
+<h1>{{name}}</h1>
+<h1>{{city}}</h1>
+<form (submit)="limpar()">
+  <input type="text" name="name" [(ngModel)]="name" placeholder="Nome">
+  <input type="text" name="city" [(ngModel)]="city" placeholder="Cidade">
+  <button type="submit">Enviar</button>
+</form>
