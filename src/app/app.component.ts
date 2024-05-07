@@ -12,6 +12,9 @@ import { Component08Component } from './component08/component08.component';
 import { Component11Component } from './component11/component11.component';
 import { Component12Component } from './component12/component12.component';
 import { Component13Component } from './component13/component13.component';
+import { Component15Component } from './component15/component15.component';
+import { Component16Component } from './component16/component16.component';
+import { Component17Component } from './component17/component17.component';
 
 @Component({
     selector: 'app-root',
@@ -30,7 +33,10 @@ import { Component13Component } from './component13/component13.component';
         Component08Component,
         Component11Component,
         Component12Component,
-        Component13Component
+        Component13Component,
+        Component15Component,
+        Component16Component,
+        Component17Component
     ]
 })
 export class AppComponent {

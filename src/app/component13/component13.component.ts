@@ -88,4 +88,9 @@ export class Component13Component {
       this.btnRegister = true
     })
   }
+
+  cancel(){
+    this.form.reset()
+    this.btnRegister = true
+  }
 }
